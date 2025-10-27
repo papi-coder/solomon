@@ -385,6 +385,63 @@ body {
   transition: 0.3s ease;
 }
 
+/* -------------------------------
+   📱 MOBILE DROPDOWN FIX
+--------------------------------*/
+.mobile-dropdown {
+  display: none;
+  position: relative;
+}
+
+.dropdown-toggle-mobile {
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-list {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background: var(--card);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  top: 2.5rem;
+  left: 0;
+  width: max-content;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.dropdown-list a {
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-list a:hover {
+  background: var(--glass);
+}
+
+/* Show dropdown on click */
+.mobile-dropdown.active .dropdown-list {
+  display: flex;
+}
+
+/* Show mobile dropdown only on small screens */
+@media (max-width: 768px) {
+  .mobile-dropdown {
+    display: block;
+  }
+}
+
+
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
@@ -1103,6 +1160,31 @@ img {
   max-width: 100%;
   border-radius: 16px;
 }
+
+/* Mobile Nav Toggle */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--card);
+    text-align: center;
+    padding: 1rem;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 
 /* ------------------------------
    NAVIGATION
