@@ -18,21 +18,33 @@
   <div id="particles-js"></div>
 
   <!-- NAV -->
-   <!-- NAVIGATION -->
-<header class="nav-wrap glass">
+   <header class="nav-wrap glass">
   <nav class="nav container">
     <a class="brand" href="index.html">PAPI</a>
 
+    <!-- Main Navigation Links -->
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="contact.html">Contact</a></li>
+
+      <!-- Mobile Dropdown Menu -->
+      <li class="mobile-dropdown">
+        <button class="dropdown-toggle-mobile">☰ More</button>
+        <ul class="dropdown-list">
+          <li><a href="contact.html">📞 Contact</a></li>
+          <li><a href="mailto:solopappy76@gmail.com">✉️ Email</a></li>
+          <li><a href="tel:+233541190485">📱 Call</a></li>
+        </ul>
+      </li>
     </ul>
 
+    <!-- Theme & Hamburger -->
     <div class="nav-actions">
       <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
 
+      <!-- Desktop Dropdown -->
       <div class="dropdown d-none d-md-block">
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
           Menu
@@ -44,13 +56,14 @@
         </ul>
       </div>
 
-      <!-- HAMBURGER BUTTON -->
       <button id="menu-toggle" aria-label="Menu" class="hamburger d-md-none">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 </header>
+
+  
 
   
 
@@ -158,4 +171,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
